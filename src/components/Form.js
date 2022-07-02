@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { uuid } from 'uuidv4'
+
 
 function Form({setTasks, tasks}) {
   const [entry, setEntry] = useState("");
  
   function handleAdd(e) {
     e.preventDefault();
-    const newTask = {description: entry, id: uuid() }
+    const newTask = {description: entry, id: entry }
     setTasks([...tasks, newTask]);
     console.log(e);
   }
