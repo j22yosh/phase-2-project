@@ -1,33 +1,35 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
+const Form = ({ addTask }) => {
 
-function Form({setTasks, tasks}) {
-  const [entry, setEntry] = useState("");
- 
-  function handleAdd(e) {
-    e.preventDefault();
-    const newTask = {description: entry, id: entry }
-    setTasks([...tasks, newTask]);
-    console.log(e);
-  }
-  function handleDel(e) {
-    e.preventDefault();
-    console.log(e);
-  }
+    const [ userInput, setUserInput ] = useState('');
 
-  return (
-    <form>
-      <input
-        type="text"
-        onChange={(event) => {
-          setEntry(event.target.value);
-          console.log(entry);
-        }}
-      ></input>
-      <button onClick={handleAdd}>Add item</button>
-      <button onClick={handleDel}>Remove item</button>
-    </form>
-  );
-}
+    const handleChange = (e) => {
+        setUserInput(e.currentTarget.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addTask(userInput);
+        setUserInput("");
+    }
+    return (
+        <form onSubmit={handleSubmit}>
+            <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
+            <button>Submit</button>
+        </form>
+    );
+};
 
 export default Form;
+
+//   function handleAdd(e) {
+//     e.preventDefault();
+//     const newTask = { description: entry, id: entry };
+//     setTasks([...tasks, newTask]);
+//     console.log(e);
+//   }
+//   function handleDel(e) {
+//     e.preventDefault();
+//     console.log(e);
+//   }

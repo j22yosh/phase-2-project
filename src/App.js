@@ -4,12 +4,15 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Header from "./components/Header";
 import TaskList from './components/TaskList';
-import Form from './components/Form';
+import About from './components/About';
 import { useState } from 'react';
 import NavBar from './components/NavBar';
+import '/home/j22yosh/Development/code/phase2/phase-2-project/src/App.css'
 
 function App() {
   const[tasks, setTasks] = useState(data)
+
+  
   
 
   return (
@@ -18,8 +21,8 @@ function App() {
       <NavBar />
       
       <Routes>
-        <Route path="/task-list" element={<TaskList tasks={tasks}/>}/>
-        <Route path="/add-task"  element={<Form setTasks={setTasks} tasks={tasks}/>}/>
+        <Route path="/task-list" element={<TaskList setTasks={setTasks}tasks={tasks}/>}/>
+        <Route path="/about"  element={<About />}/>
         <Route path="/" element={<Home />}/>
       </Routes>
     </div>

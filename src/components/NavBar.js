@@ -1,14 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import '/home/j22yosh/Development/code/phase2/phase-2-project/src/App.css'
 
 function NavBar() {
   return (
-    <div>This is the Navbar where various links will be displayed!  :D
-        <NavLink
-        to="/"
-        >Home</NavLink>
-        <NavBar
-        to="/task-list">Things that need doing!</NavBar>
+    <div>
+        <NavLink style={{marginRight: '10px'}} className="link" to="/">Home</NavLink>
+        <NavLink style={{marginRight: '10px'}} classname="link" to="/task-list">TaskList</NavLink>
+        <NavLink classname="link" to="/about">About</NavLink>
+      
+        
     </div>
   )
 }
