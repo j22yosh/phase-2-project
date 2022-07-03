@@ -1,9 +1,24 @@
-import React from 'react'
+import React,{ useState}  from 'react'
+import Form from './Form';
 
 
+ 
 function TaskList({tasks}) {
+ 
+
+ function handleclick(event){
+  if (event.target.style.textDecoration) {
+    event.target.style.removeProperty('text-decoration');
+  } else {
+    event.target.style.setProperty('text-decoration', 'line-through');
+  }
+};
   
 
+
+//    setIsDone((isDone) => !isDone)
+//   console.log(e.target.textContent);
+// }
 
  
 
@@ -12,10 +27,14 @@ function TaskList({tasks}) {
       <div>Current tasks</div>
       {
         tasks.map(function(task, id){
-          console.log(task.id)
-          return<ul key={task.id}>{task.task}</ul>
+          
+          return<ul 
+          //  className={isDone ? 'strike': ""}
+           onClick={handleclick} 
+            key={task.id}>{task.task}</ul>
         })
       }
+      <Form />
     </div>
     
     
