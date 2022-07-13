@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-function TaskList({ tasks, setTasks }) {
+function TaskList({ tasks, setTasks, newTodo }) {
   function handleclick(event) {
     if (event.target.style.textDecoration) {
       event.target.style.removeProperty("text-decoration");
@@ -26,7 +26,7 @@ function TaskList({ tasks, setTasks }) {
           </ul>
         );
       })}
-      <Form  tasks ={tasks} setTasks = {setTasks}/>
+      <Form  tasks ={tasks} setTasks = {setTasks} newTodo={newTodo}/>
     </div>
   );
 }

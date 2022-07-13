@@ -17,8 +17,12 @@ function App() {
 
   
   const [tasks, setTasks] = useState([]);
-const [currentLength,setCurrentLength] = useState(0);
-console.log(tasks.length)
+
+  function newTodo(item){
+    let newArray = [...tasks], item }
+    setTasks(newArray);}
+
+
 
 
 
@@ -35,7 +39,7 @@ console.log(tasks.length)
       <Routes>
         <Route
           path="/task-list"
-          element={<TaskList setTasks={setTasks} tasks={tasks} currentLength={currentLength} setCurrentLength={setCurrentLength} />}
+          element={<TaskList setTasks={setTasks} tasks={tasks} newTodo={newTodo} />}
         />
         <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
