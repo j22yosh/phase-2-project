@@ -19,7 +19,8 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   function newTodo(item){
-    let newArray = [...tasks], item }
+    console.log(item)
+    let newArray = [...tasks, item ]
     setTasks(newArray);}
 
 

@@ -21,40 +21,24 @@
       "complete": true
     },
     {
-      "tasks": {
-        "id": {
-          "handleID": 4
-        },
-        "task": {
-          "userInput": "John"
-        },
-        "complete": false
-      },
+      "task": "Do Dishes",
+      "complete": false,
       "id": 5
     },
     {
-      "tasks": {
-        "id": {
-          "handleID": 4
-        },
-        "task": {
-          "userInput": "John"
-        },
-        "complete": false
-      },
+      "task": "Do dishes",
+      "complete": false,
       "id": 6
     },
     {
-      "tasks": {
-        "id": {
-          "handleID": 4
-        },
-        "task": {
-          "userInput": "John"
-        },
-        "complete": false
-      },
+      "task": "Walk around",
+      "complete": false,
       "id": 7
+    },
+    {
+      "task": "Walk around",
+      "complete": false,
+      "id": 8
     }
   ],
   "comments": [
